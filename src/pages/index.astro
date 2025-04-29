@@ -4,7 +4,7 @@ import CTA from '@components/CTA.astro';
 import FAQ from '@components/FAQ.astro';
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
-import landingImage from '@assets/images/landing.jpg'; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import landingImage from '@assets/images/hero.jpg'; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from 'astro:assets';
 const optimizedImage = await getImage({ src: landingImage, format: 'avif' });
 ---
@@ -23,14 +23,14 @@ const optimizedImage = await getImage({ src: landingImage, format: 'avif' });
       <div class="cs-flex-group">
         <!-- <span class="cs-topper">Fotógrafo profesional</span> -->
         <h1 class="cs-title">Hernan Fiscella</h1>
-        <p class="cs-text">Fotógrafo Profesional</p>
+        <p class="cs-text">Fotógrafo de Bodas</p>
       </div>
     </div>
 
     <!-- Background Image -->
     <!-- We can't use Astro <Picture /> as it does not support multiple sources -->
     <picture class="cs-picture">
-      <source media="(max-width: 600px)" srcset="/assets/images/hero-m.webp" />
+      <source media="(max-width: 600px)" srcset="/assets/images/hero.jpg" />
       <source media="(min-width: 601px)" srcset="/assets/images/hero.jpg" />
       <img
         aria-hidden="true"
@@ -674,21 +674,21 @@ const optimizedImage = await getImage({ src: landingImage, format: 'avif' });
           height: (88/16em);
           margin: auto;
           margin-bottom: (23/16em);
-          background: var(--primary);
+          background: var(--bodyTextColor);
           border-radius: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
 
           img {
-            width: (48/16em);
-            height: (48/16em);
+            width: (40/16em);
+            height: (40/16em);
           }
         }
         h2 {
-          font-size: (32/16em);
-          font-weight: 700;
-          line-height: 27/20em;
+          font-size: (24/16em);
+          font-weight: 300;
+          line-height: 28/20em;
           text-align: center;
           margin-bottom: 13/20em;
           color: #1a1a1a;
@@ -741,7 +741,11 @@ const optimizedImage = await getImage({ src: landingImage, format: 'avif' });
         }
 
         h2 {
-          font-weight: bold;
+          font-size: (24/16em);
+          font-weight: 300;
+          line-height: 28/20em;
+          text-align: center;
+          margin-bottom: 13/20em;
           color: #fff;
         }
       }

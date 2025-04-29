@@ -101,7 +101,7 @@ import DarkModeToggle from '@components/DarkModeToggle.astro';
         </ul>
       </div>
     </nav>
-    <a href="/contact" class="cs-button-solid cs-nav-button">Contact Us</a>
+    <a href="/contact" class="cs-button-solid cs-nav-button">Contactame</a>
     <!--Dark Mode toggle: remove component if you don't want to enable a dark mode toggle-->
     <DarkModeToggle />
   </div>
@@ -199,6 +199,12 @@ import DarkModeToggle from '@components/DarkModeToggle.astro';
 
         font-weight: 500;
         font-size: (18/16rem);
+      }
+      a,
+      a:active,
+      a:visited {
+        font-weight: 500;
+        color: var(--bodyTextColor);
       }
 
       .cs-toggle {
@@ -403,6 +409,10 @@ import DarkModeToggle from '@components/DarkModeToggle.astro';
         .cs-logo {
           /* makes it white */
           filter: grayscale(1) brightness(1000%);
+
+          a {
+            color: var(--bodyTextColorWhite);
+          }
         }
 
         .cs-line {

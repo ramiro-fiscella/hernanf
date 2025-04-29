@@ -1,15 +1,14 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
-	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
-	},
-	"domain": "www.codestitch.app"
+  "name": "Hernán Fiscella",
+  "email": "hernanfiscella@gmail.com",
+  "phoneForTel": "+54 2281-242424",
+  "phoneFormatted": "(2281) 242424",
+  "address": {
+    "lineOne": "Neuquén 564",
+    "city": "Azul",
+    "state": "Buenos Aires",
+    "zip": "7300",
+    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+  },
+  "domain": "www.codestitch.app"
 }

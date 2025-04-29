@@ -1,27 +1,24 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
-import CTA from "@components/CTA.astro";
-import Landing from "@components/Landing.astro";
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CTA from '@components/CTA.astro';
+import Landing from '@components/Landing.astro';
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
-import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-import { getImage } from "astro:assets";
-const optimizedImage = await getImage({src: landingImage, format: 'avif'})
+import landingImage from '@assets/images/landing.jpg'; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import { getImage } from 'astro:assets';
+const optimizedImage = await getImage({ src: landingImage, format: 'avif' });
 ---
 
 <BaseLayout
   title="Projects"
   description="Meta description for the page"
-  preloadedImage = {optimizedImage}
+  preloadedImage={optimizedImage}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
-  <Landing 
-    title="Project 1"
-    image={optimizedImage}
-  />
+  <Landing title="Project 1" image={optimizedImage} />
 
   <!-- ============================================ -->
   <!--                   Gallery                    -->
@@ -35,16 +32,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture1">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port1-m.jpg"
+              srcset="/assets/images/portfolio/1.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port1.jpg"
+              srcset="/assets/images/portfolio/1.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port1.jpg"
+              src="/assets/images/portfolio/1.avif"
               alt="new hallway"
               loading="lazy"
               width="400"
@@ -54,16 +51,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture2">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port4-m.jpg"
+              srcset="/assets/images/portfolio/2"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port4.jpg"
+              srcset="/assets/images/portfolio/2"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port4.jpg"
+              src="/assets/images/portfolio/2"
               alt="new home construction"
               loading="lazy"
               width="400"
@@ -73,16 +70,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture3">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port7-m.jpg"
+              srcset="/assets/images/portfolio/3.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port7.jpg"
+              srcset="/assets/images/portfolio/3.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port7.jpg"
+              src="/assets/images/portfolio/3.avif"
               alt="building a new wall"
               loading="lazy"
               width="400"
@@ -96,16 +93,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture1">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port2-m.jpg"
+              srcset="/assets/images/portfolio/4.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port2.jpg"
+              srcset="/assets/images/portfolio/4.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port2.jpg"
+              src="/assets/images/portfolio/4.avif"
               alt="new kitchen"
               loading="lazy"
               width="400"
@@ -115,16 +112,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture2">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port5-m.jpg"
+              srcset="/assets/images/portfolio/5.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port5.jpg"
+              srcset="/assets/images/portfolio/5.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port5.jpg"
+              src="/assets/images/portfolio/5.avif"
               alt="apartment addition"
               loading="lazy"
               width="400"
@@ -134,16 +131,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture3">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port8-m.jpg"
+              srcset="/assets/images/portfolio/6.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port8.jpg"
+              srcset="/assets/images/portfolio/6.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port8.jpg"
+              src="/assets/images/portfolio/6.avif"
               alt="kew kitchen cabinets"
               loading="lazy"
               width="400"
@@ -157,16 +154,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture1">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port3-m.jpg"
+              srcset="/assets/images/portfolio/7.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port3.jpg"
+              srcset="/assets/images/portfolio/7.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port3.jpg"
+              src="/assets/images/portfolio/7.avif"
               alt="new kitchen"
               loading="lazy"
               width="400"
@@ -176,16 +173,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture2">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port6-m.jpg"
+              srcset="/assets/images/portfolio/8.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port6.jpg"
+              srcset="/assets/images/portfolio/8.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port6.jpg"
+              src="/assets/images/portfolio/8.avif"
               alt="apartment addition"
               loading="lazy"
               width="400"
@@ -195,16 +192,16 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <picture class="cs-picture cs-picture3">
             <source
               media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port9-m.jpg"
+              srcset="/assets/images/portfolio/9.avif"
             />
             <source
               media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port9.jpg"
+              srcset="/assets/images/portfolio/9.avif"
             />
             <img
               aria-hidden="true"
               decoding="async"
-              src="/assets/images/portfolio/port9.jpg"
+              src="/assets/images/portfolio/9.avif"
               alt="kew kitchen cabinets"
               loading="lazy"
               width="400"
@@ -245,7 +242,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 
       .cs-image-group {
         /* used rem so it doesn't scale with the font size of on parent */
-        font-size: ~"min(1.1vw, 1em)";
+        font-size: ~'min(1.1vw, 1em)';
         width: 100%;
         max-width: (1322/16em);
         margin: 0 auto (60/16rem);

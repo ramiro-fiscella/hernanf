@@ -10,7 +10,7 @@
   :root {
     --primary: hsl(0, 0%, 100%);
     --primaryLight: hsl(46, 79%, 54%);
-    --secondary: #1f1e1c;
+    --secondary: #757575;
     --secondaryLight: #373b3f;
     --headerColor: #000000;
     --bodyTextColor: #000000;
@@ -39,7 +39,7 @@
 
   .cs-title {
     font-size: var(--headerFontSize);
-    font-weight: 900;
+    font-weight: 40;
     line-height: 1.2em;
     margin: 0 auto (16/16rem);
     color: var(--headerColor);
@@ -184,6 +184,13 @@
     font-size: (16/16rem);
     line-height: 1.5em;
     margin: 0;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:active {
+    color: var(--secondaryLight);
   }
 
   p,
